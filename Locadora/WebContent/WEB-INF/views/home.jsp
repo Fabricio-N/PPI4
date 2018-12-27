@@ -10,6 +10,6 @@
 <body>
 <c:import url="menu.jsp"></c:import>
 	
-	<h1>Minha aplicação deu CERTO! #EleNão</h1>
+	<h1>Locadora de Filmes</h1>
 </body>
 </html>

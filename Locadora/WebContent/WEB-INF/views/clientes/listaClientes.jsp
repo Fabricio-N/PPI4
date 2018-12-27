@@ -30,9 +30,11 @@
 					<td>${cliente.email }</td>
 					<td>${cliente.rg }</td>
 					<td>${cliente.endereco }</td>
-					<td><fmt:formatDate value="${cliente.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
+					<td><fmt:formatDate value="${cliente.dataNascimento.time}"
+							pattern="dd/MM/yyyy" /></td>
+					<td><a href="/Locadora/clientes/remover?id=${cliente.id}">Remover</a></td>
 					<td><a
-						href="/Locadora/clientes/remover?id=${cliente.id}">Remover</a></td>
+						href="/Locadora/clientes/selecionar?id=${cliente.id}">Alterar</a></td>
 				</tr>
 			</c:forEach>
 

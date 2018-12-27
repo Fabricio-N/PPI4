@@ -1,0 +1,35 @@
+create database locadora_ef;
+
+use locadora_ef;
+
+create table clientes (
+id BIGINT NOT NULL AUTO_INCREMENT,
+nome VARCHAR(255),
+email VARCHAR(255),
+rg VARCHAR(255),
+endereco VARCHAR(255),
+dataNascimento DATE,
+primary key (id)
+);
+
+
+create table filmes (
+id BIGINT NOT NULL AUTO_INCREMENT,
+titulo VARCHAR(255),
+genero VARCHAR(255),
+anoLancamento int,
+primary key (id)
+);
+
+
+
+create table alugueis (
+id BIGINT NOT NULL AUTO_INCREMENT,
+cliente bigint,
+filme bigint,
+dataAluguel DATE,
+dataDevolucao DATE,
+primary key (id),
+foreign key (cliente) references clientes(id),
+foreign key (filme) references filmes(id)
+);

@@ -2,11 +2,15 @@ package locadora.models;
 
 import java.util.Calendar;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Aluguel {
 
 	private Cliente cliente;
 	private Filme filme;
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Calendar dataAluguel;
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Calendar dataDevolucao;
 	private Long id;
 

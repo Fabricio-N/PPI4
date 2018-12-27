@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import locadora.dao.FilmeDAO;
 
+import locadora.dao.FilmeDAO;
 import locadora.models.Filme;
 
 @Controller
@@ -47,5 +47,23 @@ public class FilmessController {
 		filmeDao.remover(filme);
 		return "redirect:../filmes";
 
+	}
+	
+	@RequestMapping("/selecionar")
+	public ModelAndView selecionar(Filme filme) {
+		FilmeDAO filmeDAO = new FilmeDAO();
+		filme = filmeDAO.getFilmeByID(filme.getId());
+		
+		ModelAndView model = new ModelAndView("filmes/form-alterar-filme"); 
+		model.addObject("filme", filme);
+		return model;
+	}
+	
+	@PostMapping("/alterar")
+	public String alterar(Filme filme) {
+		System.out.println("Chamou o método alterar");
+		FilmeDAO filmeDAO = new FilmeDAO();
+		filmeDAO.alterar(filme);
+		return "redirect:../filmes";
 	}
 }

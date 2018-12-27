@@ -22,7 +22,7 @@ public class AluguelDAO {
 
 	public boolean inserir(Aluguel aluguel) {
 
-		String query = "insert into alugueis (cliente, filme, dataDevolucao) values (?, ?, ?);";
+		String query = "insert into alugueis (cliente, filme, dataAluguel) values (?, ?, ?);";
 
 		try {
 			PreparedStatement p = connection.prepareStatement(query);

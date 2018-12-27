@@ -59,7 +59,7 @@ public class AlugueisController {
 
 	}
 
-	@GetMapping
+	@GetMapping("/geral")
 	public ModelAndView listar() {
 		System.out.println("Chamou o metódo de listagem");
 		AluguelDAO aluguelDao = new AluguelDAO();

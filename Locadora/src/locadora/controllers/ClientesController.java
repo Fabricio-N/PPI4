@@ -53,7 +53,7 @@ public class ClientesController {
 		ClienteDAO clienteDAO = new ClienteDAO();
 		cliente = clienteDAO.getClienteByID(cliente.getId());
 		
-		ModelAndView model = new ModelAndView("contatos/form-alterar"); 
+		ModelAndView model = new ModelAndView("clientes/form-alterar-cliente"); 
 		model.addObject("cliente", cliente);
 		return model;
 	}
