@@ -118,6 +118,7 @@ public class ClienteDAO {
 				cliente.setNome(rs.getString("nome"));
 				cliente.setEmail(rs.getString("email"));
 				cliente.setRg(rs.getString("rg"));
+				cliente.setEndereco(rs.getString("endereco"));
 				Calendar data = Calendar.getInstance();
 				data.setTime(rs.getDate("dataNascimento"));
 				cliente.setDataNascimento(data);

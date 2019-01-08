@@ -43,6 +43,8 @@ public class AlugueisController {
 		System.out.println("Chamou o método de adicionar");
 		AluguelDAO aluguelDAO = new AluguelDAO();
 
+		System.out.println("Qtd Alugueis: " + aluguelDAO.qtdAlugueis(aluguel));
+		System.out.println("Qtd filmes: " + aluguelDAO.qtdFilmes(aluguel));
 		if (aluguelDAO.qtdAlugueis(aluguel)) {
 			if (aluguelDAO.qtdFilmes(aluguel)) {
 				aluguelDAO.inserir(aluguel);
