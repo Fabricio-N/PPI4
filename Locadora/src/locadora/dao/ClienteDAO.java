@@ -48,7 +48,7 @@ public class ClienteDAO {
 		try {
 
 			List<Cliente> clientes = new ArrayList<Cliente>();
-			PreparedStatement stmt = connection.prepareStatement("select * from clientes");
+			PreparedStatement stmt = connection.prepareStatement("select * from clientes;");
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
@@ -118,6 +118,7 @@ public class ClienteDAO {
 				cliente.setNome(rs.getString("nome"));
 				cliente.setEmail(rs.getString("email"));
 				cliente.setRg(rs.getString("rg"));
+				cliente.setEndereco(rs.getString("endereco"));
 				Calendar data = Calendar.getInstance();
 				data.setTime(rs.getDate("dataNascimento"));
 				cliente.setDataNascimento(data);
