@@ -7,15 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-
-<style>
-	h1 {
-		color: white;
-		text-align: center;
-	}
-</style>
 <body>
 	<c:import url="../menu.jsp"></c:import>
-	<h1>O livro está indisponivel!</h1>
+	<h1>O Filme está indisponivel!</h1>
 </body>
 </html>
