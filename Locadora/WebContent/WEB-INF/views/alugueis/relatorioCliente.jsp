@@ -8,14 +8,8 @@
 <title>Insert title here</title>
 </head>
 
-<style>
-	h1{
-		color: white;
-		text-align: center;
-	}
-</style>
 <body>
 	<c:import url="../menu.jsp"></c:import>
-	<h1>O aluno atingiu o limite de livros emprestados!</h1>
+	<h1>O aluno atingiu o limite de filmes emprestados!</h1>
 </body>
 </html>

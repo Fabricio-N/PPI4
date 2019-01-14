@@ -42,6 +42,9 @@ public class AlugueisController {
 	public String adicionar(Aluguel aluguel) throws SQLException {
 		System.out.println("Chamou o método de adicionar");
 		AluguelDAO aluguelDAO = new AluguelDAO();
+		
+		System.out.println(aluguel.getCliente());
+		System.out.println(aluguel.getFilme());
 
 		System.out.println("Qtd Alugueis: " + aluguelDAO.qtdAlugueis(aluguel));
 		System.out.println("Qtd filmes: " + aluguelDAO.qtdFilmes(aluguel));
@@ -61,7 +64,7 @@ public class AlugueisController {
 
 	}
 
-	@GetMapping("/geral")
+	@GetMapping
 	public ModelAndView listar() {
 		System.out.println("Chamou o metódo de listagem");
 		AluguelDAO aluguelDao = new AluguelDAO();

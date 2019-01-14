@@ -32,6 +32,7 @@ public class ClienteDAO {
 			stmt.setString(3, cliente.getRg());
 			stmt.setString(4, cliente.getEndereco());
 			stmt.setDate(5, new java.sql.Date(cliente.getDataNascimento().getTimeInMillis()));
+			stmt.setLong(6, cliente.getId());
 
 			stmt.execute();
 			stmt.close();

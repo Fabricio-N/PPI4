@@ -157,6 +157,7 @@ public class AluguelDAO {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setDate(1, new java.sql.Date(Calendar.getInstance().getTimeInMillis()));
 			stmt.setLong(2, aluguel.getId());
+			
 			stmt.execute();
 			stmt.close();
 		} catch (SQLException e) {

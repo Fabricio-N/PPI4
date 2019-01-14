@@ -26,6 +26,7 @@ public class FilmeDAO {
 			p.setString(1, l.getTitulo());
 			p.setString(2, l.getGenero());
 			p.setLong(3, l.getAnoLancamento());
+			p.setLong(4, l.getId());
 			
 
 			p.execute();
@@ -64,7 +65,7 @@ public class FilmeDAO {
 	}
 
 	public void alterar(Filme l) {
-		String sql = "update filmes set titulo=?, genero=?, anoLancamento=?, where id=?;";
+		String sql = "update filmes set titulo=?, genero=?, anoLancamento=? where id=?;";
 		try {
 			PreparedStatement stmt = connec.prepareStatement(sql);
 			stmt.setString(1, l.getTitulo());
