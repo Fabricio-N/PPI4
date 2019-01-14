@@ -49,7 +49,7 @@ public class ClienteDAO {
 		try {
 
 			List<Cliente> clientes = new ArrayList<Cliente>();
-			PreparedStatement stmt = connection.prepareStatement("select * from clientes");
+			PreparedStatement stmt = connection.prepareStatement("select * from clientes;");
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {
