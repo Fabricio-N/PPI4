@@ -1,14 +1,18 @@
 package locadora.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import locadora.dao.ConnectionFactory;
+import locadora.models.Aluguel;
 import locadora.models.Filme;
+import locadora.models.FilmesMaisAlugados;
 
 public class FilmeDAO {
 	private Connection connec;
@@ -26,7 +30,7 @@ public class FilmeDAO {
 			p.setString(1, l.getTitulo());
 			p.setString(2, l.getGenero());
 			p.setLong(3, l.getAnoLancamento());
-			p.setLong(4, l.getId());
+			
 			
 
 			p.execute();
@@ -140,5 +144,23 @@ public class FilmeDAO {
 			throw new RuntimeException(e);
 		}
 
+	}
+	
+	public List<FilmesMaisAlugados> getListaMaisAlugados() {
+		try {
+			List<FilmesMaisAlugados> maisAlugados = new ArrayList<FilmesMaisAlugados>();
+			PreparedStatement stmt = connec.prepareStatement("SELECT count(filme), filme FROM alugueis GROUP BY filme ORDER BY count(filme) DESC;");
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return null;
+		
 	}
 }

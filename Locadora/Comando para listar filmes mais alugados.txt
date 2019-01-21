@@ -1,0 +1,1 @@
+SELECT count(filme), filme FROM alugueis GROUP BY filme ORDER BY count(filme) DESC;

@@ -57,7 +57,7 @@ public class AluguelDAO {
 				cont++;
 			}
 			stmt.close();
-			if (cont > 2) {
+			if (cont > 1) {
 				return false;
 			}
 		} catch (SQLException e) {
@@ -96,7 +96,7 @@ public class AluguelDAO {
 			PreparedStatement stmt = connection
 					.prepareStatement("select * from alugueis where dataDevolucao is null and dataAluguel < ?;");
 			Calendar date = Calendar.getInstance();
-			stmt.setDate(1, new Date(date.getTimeInMillis() - 14 * 24 * 60 * 60 * 1000));
+			stmt.setDate(1, new Date(date.getTimeInMillis() - 7 * 24 * 60 * 60 * 1000));
 			ResultSet rs = stmt.executeQuery();
 
 			while (rs.next()) {

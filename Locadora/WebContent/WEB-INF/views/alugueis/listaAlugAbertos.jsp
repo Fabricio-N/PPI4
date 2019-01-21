@@ -17,6 +17,7 @@
 		<thead>
 			<tr>
 				<th>Filme</th>
+				<th>Cliente</th>
 				<th>RG</th>
 				<th>Data do Aluguel</th>
 				<th>Devolução</th>
@@ -26,6 +27,7 @@
 			<c:forEach var="aluguel" items="${alugueis}">
 				<tr>
 					<td>${aluguel.filme.titulo}</td>
+					<td>${aluguel.cliente.nome}</td>
 					<td>${aluguel.cliente.rg}</td>
 					<td><fmt:formatDate value="${aluguel.dataAluguel.time}" pattern="dd/MM/yyyy" /></td>
 					<td><a
