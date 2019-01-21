@@ -24,9 +24,11 @@ public class ConnectionFactory {
 		return connection;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		Connection con = ConnectionFactory.getConnection();
 
 		System.out.println(con);
+		
+		con.close();
 	}
 }
