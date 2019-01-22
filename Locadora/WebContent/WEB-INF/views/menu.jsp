@@ -4,6 +4,7 @@
 	<li><a href="/Locadora/clientes">Listar Clientes</a></li>
 	<li><a href="/Locadora/filmes/form">Adicionar Filme</a></li>
 	<li><a href="/Locadora/filmes">Listar Filmes</a></li>
+	<li><a href="/Locadora/filmes/MaisAlugados">Listar Filmes Mais Alugados</a></li>
 	<li><a href="/Locadora/alugueis/form">Adicionar Aluguel</a></li>
 	<li><a href="/Locadora/alugueis/">Listar Alugueis</a></li>
 	<li><a href="/Locadora/alugueis/abertos">Listar Alugueis em Abertos</a></li>

@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import locadora.dao.FilmeDAO;
 import locadora.models.Filme;
+import locadora.models.FilmesMaisAlugados;
 
 @Controller
 @RequestMapping("/filmes")
@@ -65,5 +66,14 @@ public class FilmessController {
 		FilmeDAO filmeDAO = new FilmeDAO();
 		filmeDAO.alterar(filme);
 		return "redirect:../filmes";
+	}
+	
+	@RequestMapping("/MaisAlugados")
+	public ModelAndView MaisAlugados (Filme filme) {
+		FilmeDAO filmedao = new FilmeDAO();
+		List<FilmesMaisAlugados> lista = filmedao.getListaMaisAlugados();
+		ModelAndView model = new ModelAndView("filmes/listaFilmeMaisAlugados");
+		model.addObject("filmes", lista);
+		return model;
 	}
 }
