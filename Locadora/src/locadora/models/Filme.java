@@ -5,6 +5,7 @@ public class Filme {
 	private String titulo;
 	private String genero;
 	private int anoLancamento;
+	private String preco;
 	private Long id;
 
 	public String getTitulo() {
@@ -29,6 +30,15 @@ public class Filme {
 
 	public void setAnoLancamento(int anoLancamento) {
 		this.anoLancamento = anoLancamento;
+	}
+	
+
+	public String getPreco() {
+		return preco;
+	}
+
+	public void setPreco(String preco) {
+		this.preco = preco;
 	}
 
 	public Long getId() {

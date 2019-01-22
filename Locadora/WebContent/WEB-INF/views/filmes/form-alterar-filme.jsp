@@ -21,6 +21,8 @@
 		
 		Ano de Lançamento: <input type="text" name="anoLancamento" value="${filme.anoLancamento }">
 		
+		Preço: <input type="text" name="preco" value="${filme.preco }">
+		
 		<button type="submit">Alterar</button>
 		
 	</form>

@@ -18,6 +18,7 @@ id BIGINT NOT NULL AUTO_INCREMENT,
 titulo VARCHAR(255),
 genero VARCHAR(255),
 anoLancamento int,
+preco VARCHAR(255),
 primary key (id)
 );
 

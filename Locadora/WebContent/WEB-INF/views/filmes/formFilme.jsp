@@ -21,6 +21,8 @@
 			
 			Ano de Lançamnto: <input type="text" name="anoLancamento">
 			
+			Preço: <input type="text" name="preco">
+			
 		    <input type="submit" value="Submit">
 		</form>
 	</div>

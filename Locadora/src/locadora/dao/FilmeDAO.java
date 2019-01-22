@@ -23,13 +23,14 @@ public class FilmeDAO {
 
 	public boolean adicionar(Filme l) {
 
-		String query = "insert into filmes (titulo, genero, anoLancamento) values (?, ?, ?);";
+		String query = "insert into filmes (titulo, genero, anoLancamento, preco) values (?, ?, ?, ?);";
 		try {
 
 			PreparedStatement p = connec.prepareStatement(query);
 			p.setString(1, l.getTitulo());
 			p.setString(2, l.getGenero());
 			p.setLong(3, l.getAnoLancamento());
+			p.setString(4, l.getPreco());
 			
 			
 
@@ -55,6 +56,7 @@ public class FilmeDAO {
 				filme.setTitulo(rs.getString("titulo"));
 				filme.setGenero(rs.getString("genero"));
 				filme.setAnoLancamento(rs.getInt("anoLancamento"));
+				filme.setPreco(rs.getString("preco"));
 				filme.setId(rs.getLong("id"));
 
 				filmes.add(filme);
@@ -69,13 +71,14 @@ public class FilmeDAO {
 	}
 
 	public void alterar(Filme l) {
-		String sql = "update filmes set titulo=?, genero=?, anoLancamento=? where id=?;";
+		String sql = "update filmes set titulo=?, genero=?, anoLancamento=?, preco=? where id=?;";
 		try {
 			PreparedStatement stmt = connec.prepareStatement(sql);
 			stmt.setString(1, l.getTitulo());
 			stmt.setString(2, l.getGenero());
 			stmt.setInt(3, l.getAnoLancamento());
-			stmt.setLong(4, l.getId());
+			stmt.setString(4, l.getPreco());
+			stmt.setLong(5, l.getId());
 
 			stmt.execute();
 			stmt.close();
@@ -110,6 +113,7 @@ public class FilmeDAO {
 				filme.setTitulo(rs.getString("titulo"));
 				filme.setGenero(rs.getString("genero"));
 				filme.setAnoLancamento(rs.getInt("anoLancamento"));
+				filme.setPreco(rs.getString("preco"));
 				
 			}
 			rs.close();
@@ -135,6 +139,7 @@ public class FilmeDAO {
 				filme.setTitulo(rs.getString("titulo"));
 				filme.setGenero(rs.getString("genero"));
 				filme.setAnoLancamento(rs.getInt("anoLancamento"));
+				filme.setPreco(rs.getString("preco"));
 				
 			}
 			rs.close();
@@ -153,6 +158,8 @@ public class FilmeDAO {
 			ResultSet rs = stmt.executeQuery();
 			
 			while (rs.next()) {
+				FilmesMaisAlugados mAlugados = new FilmesMaisAlugados();
+				mAlugados.setQuantidade(rs.getInt("quantidade"));
 				
 			}
 			

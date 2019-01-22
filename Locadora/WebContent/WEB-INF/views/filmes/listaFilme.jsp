@@ -19,6 +19,7 @@
 				<th>Titulo</th>
 				<th>Genero</th>
 				<th>Ano de Lançamento</th>
+				<th>Preço</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,6 +28,7 @@
 					<td>${filme.titulo }</td>
 					<td>${filme.genero }</td>
 					<td>${filme.anoLancamento }</td>
+					<td>${filme.preco }</td>
 					<td><a href="/Locadora/filmes/remover?id=${filme.id}">Remover</a></td>
 					<td><a href="/Locadora/filmes/selecionar?id=${filme.id}">Alterar</a></td>
 				</tr>
