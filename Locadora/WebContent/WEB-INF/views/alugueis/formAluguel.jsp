@@ -8,6 +8,47 @@
 <meta charset="UTF-8">
 <title>Realizar aluguel</title>
 </head>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #33cc33;
+    color: green;
+    padding: 15px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 1px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 290px;
+    margin: auto;
+}
+
+h1 {
+	text-align: center;
+	color: #ccffff;
+	
+}
+h1 {text-shadow: 0 0 0.2em #000000}
+</style>
 <body>
 	<c:import url="../menu.jsp"></c:import>
 	<h1>Adicionar Aluguel</h1>
