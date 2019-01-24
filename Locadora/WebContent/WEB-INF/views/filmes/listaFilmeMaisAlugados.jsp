@@ -7,6 +7,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Listagem dos Filmes Mais Alugados</title>
+<style>
+tr {
+	color: black;
+	background-color: white;
+}
+
+h1 {
+ 	color: black;
+ 	background-color: white;
+ 	text-align: center;
+}
+</style>
 </head>
 <body>
 <c:import url="../menu.jsp"></c:import>

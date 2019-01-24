@@ -7,6 +7,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Listagem dos clientes</title>
+
+<style>
+tr {
+	color: black;
+	background-color: white;
+}
+
+h1 {
+ 	color: black;
+ 	background-color: white;
+ 	text-align: center;
+}
+</style>
+
 </head>
 <body>
 	<c:import url="../menu.jsp"></c:import>

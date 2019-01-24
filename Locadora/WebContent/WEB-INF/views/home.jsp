@@ -7,9 +7,20 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<style>
+
+h1 {
+	text-shadow: 0 0 0.5em #00FFFF;
+	text-align: center;
+	color: white;
+	background:#B40404;
+ }
+
+
+</style>
 <body>
 <c:import url="menu.jsp"></c:import>
 	
-	<h1>Locadora de Filmes</h1>
+	<h1>Locadora de Filmes EF</h1>
 </body>
 </html>
