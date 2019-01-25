@@ -42,6 +42,7 @@ h1 {
 					<td>${aluguel.filme.titulo }</td>
 					<td><fmt:formatDate value="${aluguel.dataAluguel.time}" pattern="dd/MM/yyyy" /></td>
 					<td><fmt:formatDate value="${aluguel.dataDevolucao.time}" pattern="dd/MM/yyyy" /></td>
+					<td><a href="/Locadora/alugueis/remover?id=${aluguel.id}">Remover</a></td>
 				</tr>
 			</c:forEach>
 

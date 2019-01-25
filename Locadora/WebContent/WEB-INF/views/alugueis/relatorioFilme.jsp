@@ -5,10 +5,46 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Aviso</title>
 </head>
+<style>
+
+h1 {
+	text-shadow: 0 0 0.5em black;
+	text-align: center;
+	color: white;
+	font-size: 50px;
+	background-color: #3B0B0B;
+ }
+
+#div1 {-webkit-animation-timing-function: O cliente atingiu o limite de filmes alugados;}
+
+#div1 {
+	width: 525px;
+    height: 70px;
+    background-color: black;
+    font-weight: bold;
+    position: relative;
+    -webkit-animation: mymove 8s infinite;
+    animation: mymove 8s infinite;
+    color: white;
+   text-align: center;
+   font-size: 30px;
+}
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 550px;}
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 550px;}
+}
+
+</style>
 <body>
 	<c:import url="../menu.jsp"></c:import>
-	<h1>O Filme está indisponivel!</h1>
+	<h1>Aviso:</h1>
+	<div id="div1">O filme está indisponivel</div>
 </body>
 </html>

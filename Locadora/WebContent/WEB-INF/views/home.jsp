@@ -13,7 +13,8 @@ h1 {
 	text-shadow: 0 0 0.5em #00FFFF;
 	text-align: center;
 	color: white;
-	background:#B40404;
+	background:#3B0B0B;
+	
  }
 
 

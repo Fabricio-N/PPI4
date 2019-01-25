@@ -103,4 +103,13 @@ public class AlugueisController {
 		return "redirect:../alugueis/abertos";
 
 	}
+	
+	@RequestMapping("/remover")
+	public String remover(Aluguel aluguel) {
+		System.out.println("Chamou o método remover");
+		AluguelDAO aluguelDao = new AluguelDAO();
+		aluguelDao.remover(aluguel);
+		return "redirect:../alugueis";
+
+	}
 }

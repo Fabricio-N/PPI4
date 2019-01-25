@@ -210,5 +210,17 @@ public class AluguelDAO {
 		return true;
 
 	}
+	
+	public void remover(Aluguel aluguel) {
+		try {
+			PreparedStatement stmt = connection.prepareStatement("delete from alugueis where id=?;");
+			stmt.setLong(1, aluguel.getId());
+			stmt.execute();
+			stmt.close();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
+	}
 
 }
