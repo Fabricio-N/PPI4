@@ -42,11 +42,16 @@ div {
 
 h1 {
 	text-align: center;
-	color: #ccffff;
+	color: white;
+	background-color: #3B0B0B;
+	background-size: 300px 100px;
 }
 
 h1 {text-shadow: 0 0 0.2em #000000}
 
+h3 {
+	color: #B40404;
+}
 </style>
 
 <head>
@@ -60,15 +65,15 @@ h1 {text-shadow: 0 0 0.2em #000000}
 
 	<div>
 		<form action="/Locadora/filmes" method="post">
-			Titulo: <input type="text" name="titulo">
+			<h3>Titulo:</h3> <input type="text" name="titulo">
 			
-			Genero: <input type="text" name="genero">
+			<h3>Genero:</h3> <input type="text" name="genero">
 			
-			Ano de Lançamnto: <input type="text" name="anoLancamento">
+			<h3>Ano de Lançamnto:</h3> <input type="text" name="anoLancamento">
 			
-			Preço: <input type="text" name="preco">
+			<h3>Preço:</h3> <input type="text" name="preco">
 			
-		    <input type="submit" value="Submit">
+		    <input type="submit" value="Adicionar">
 		</form>
 	</div>
 

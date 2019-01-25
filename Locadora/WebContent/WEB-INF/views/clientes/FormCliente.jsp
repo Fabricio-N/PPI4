@@ -41,11 +41,16 @@ div {
 
 h1 {
 	text-align: center;
-	color: #ccffff;
+	color: white;
+	background-color: #3B0B0B;
+	background-size: 300px 100px;
 }
 
 h1 {text-shadow: 0 0 0.2em #000000}
 
+h3 {
+	color: #B40404;
+}
 </style>
 <head>
 <meta charset="UTF-8">
@@ -57,16 +62,17 @@ h1 {text-shadow: 0 0 0.2em #000000}
 	
 	<div>
 		<form action="/Locadora/clientes" method="post">
-			Nome: <input type="text" name="nome">
+			<h3>Nome:</h3> <input type="text" name="nome">
 		
-			Email: <input type="text" name="email">
+			<h3>Email:</h3> <input type="text" name="email">
 			
-			RG: <input type="text" name="rg">
+			<h3>RG:</h3> <input type="text" name="rg">
 		
-			Endereço: <input type="text" name="endereco">
+			<h3>Endereço:</h3> <input type="text" name="endereco">
 		
-			Data de Nascimento: <input type="text" name="dataNascimento">
-			<button type="submit">Adicionar</button>
+			<h3>Data de Nascimento:</h3> <input type="text" name="dataNascimento">
+			
+			<input type="submit" value="Adicionar">
 		
 		</form>
 	</div>

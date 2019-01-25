@@ -42,7 +42,10 @@ div {
 
 h1 {
 	text-align: center;
-	color: #ccffff;
+	color: white;
+	background-color: #3B0B0B;
+	background-size: 300px 100px;
+	
 }
 
 h1 {text-shadow: 0 0 0.2em #000000}
@@ -73,7 +76,8 @@ h4 {
 		<h4>Endereço:</h4> <input type="text" name="endereco" value="${cliente.endereco }">
 		
 		<h4>Data de Nascimento:</h4> <input type="text" name="dataNascimento" value='<fmt:formatDate pattern="dd/MM/yyyy" value="${cliente.dataNascimento.time }"/>'>
-		<button type="submit">Alterar</button>
+		
+		<input type="submit" value="Adicionar">
 	</div>
 	</form>
 </body>

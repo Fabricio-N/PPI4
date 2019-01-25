@@ -15,7 +15,7 @@ body {
 	background-image:
 		url("https://assets.nflxext.com/ffe/siteui/vlv3/cf96bcd2-09b3-4fd2-966e-89cfae0019ed/82cec896-1612-432a-b080-80069fe78147/BR-pt-20190121-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
 	background-repeat: no-repeat;
-	background-size: 1600px 800px;
+	background-size: auto;
 }
 
 li {

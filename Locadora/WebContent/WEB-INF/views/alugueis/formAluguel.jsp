@@ -21,8 +21,8 @@ input[type=text], select {
 
 input[type=submit] {
     width: 100%;
-    background-color: #33cc33;
-    color: green;
+    background-color: #4CAF50;
+    color: white;
     padding: 15px 10px;
     margin: 8px 0;
     border: none;
@@ -35,41 +35,48 @@ input[type=submit]:hover {
 }
 
 div {
-    border-radius: 1px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    width: 290px;
-    margin: auto;
+	border-radius: 1px;
+	margin: auto;
+	background-color: #f2f2f2;
+	padding: 20px;
+	width: 290px;
+	
 }
 
 h1 {
 	text-align: center;
-	color: #ccffff;
+	color: white;
+	background-color: #3B0B0B;
+	background-size: 300px 100px;
 	
 }
 h1 {text-shadow: 0 0 0.2em #000000}
+
+h3 {
+	color: #B40404;
+}
 </style>
 <body>
 	<c:import url="../menu.jsp"></c:import>
 	<h1>Adicionar Aluguel</h1>
 	<div>
 	<form action="/Locadora/alugueis" method="post">
-		<h2>
+		<h3>
 			Clientes <select name="cliente.id">
 				<c:forEach var="cliente" items="${clientes }">
 					<option value="${cliente.id }">${cliente.nome }</option>
 				</c:forEach>
 			</select>
-		</h2>
+		</h3>
 
-		<h2>
+		<h3>
 			Filmes <select name="filme.id">
 				<c:forEach var="filme" items="${filmes }">
 					<option value="${filme.id }">${filme.titulo }</option>
 				</c:forEach>
 			</select>
-		</h2>
-		<button type="submit">Adicionar</button>
+		</h3>
+		<input type="submit" value="Adicionar">
 	</form>
 	</div>
 </body>
