@@ -72,6 +72,8 @@ public class FilmessController {
 	public ModelAndView MaisAlugados (Filme filme) {
 		FilmeDAO filmedao = new FilmeDAO();
 		List<FilmesMaisAlugados> lista = filmedao.getListaMaisAlugados();
+		
+		System.out.println(lista);
 		ModelAndView model = new ModelAndView("filmes/listaFilmeMaisAlugados");
 		model.addObject("filmes", lista);
 		return model;

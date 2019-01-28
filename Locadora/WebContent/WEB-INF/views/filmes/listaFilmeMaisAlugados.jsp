@@ -28,6 +28,7 @@ h1 {
 	<table border="10" align="center">
 		<thead>
 			<tr>
+				<th>Quantidade</th>
 				<th>Titulo</th>
 				<th>Genero</th>
 			</tr>
@@ -35,8 +36,9 @@ h1 {
 		<tbody>
 			<c:forEach var="filme" items="${filmes }">
 				<tr>
-					<td>${filme.titulo }</td>
-					<td>${filme.genero }</td>
+					<td>${filme.quantidade }</td>
+					<td>${filme.filme.titulo }</td>
+					<td>${filme.filme.genero }</td>
 				</tr>
 			</c:forEach>
 

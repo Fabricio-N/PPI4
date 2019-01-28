@@ -159,14 +159,14 @@ public class FilmeDAO {
 			
 			while (rs.next()) {
 				FilmesMaisAlugados mAlugados = new FilmesMaisAlugados();
-				mAlugados.setQuantidade(rs.getInt("quantidade"));
+				mAlugados.setQuantidade(rs.getInt("count(filme)"));
 				mAlugados.setFilme(new FilmeDAO().getFilmeByID(rs.getLong("filme")));
 				maisAlugados.add(mAlugados);
 			}
 			
 			return maisAlugados;
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 			return null;
 		}
 		
